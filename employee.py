@@ -5,6 +5,7 @@ class Employee:
     commission = False
     contract = ''
     commission_type = ''
+    salary = 0
     def __init__(self, name, commission, contract, commission_type):
         self.name = name
         self.commission = commission
@@ -15,20 +16,25 @@ class Employee:
         if(self.commission == True):
             if(self.contract == 'salary'):
                 if(self.get_commision_type() == 'contract'):
-                    return 3800
+                    salary = 3800
+                    return salary
                 elif(self.get_commision_type() == 'bonus'):
-                    return 3500
+                    salary = 3500
+                    return salary
             elif(self.contract == 'hourly'):
                 if(self.get_commision_type() == 'contract'):
-                    return 4410
+                    salary = 4410
+                    return salary
                 elif(self.get_commision_type() == 'bonus'):
-                    return 4200
+                    salary = 4200
+                    return salary
             else:
-                if(self.get_commision_type() == 'no commission'):
-                    if(self.contract == 'salary'):
-                        return 4000
-                    elif(self.contract == 'hourly'):
-                        return 2500
+                if(self.contract == 'salary'):
+                    salary = 4000
+                    return salary
+                elif(self.contract == 'hourly'):
+                    salary = 2500
+                    return salary
     def get_commision_type(self):
         return self.commission_type
     def __str__(self):
