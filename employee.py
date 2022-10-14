@@ -24,10 +24,11 @@ class Employee:
                 elif(self.get_commision_type() == 'bonus'):
                     return 4200
             else:
-                if(self.contract == 'salary'):
-                    return 4000
-                elif(self.contract == 'hourly'):
-                    return 2500
+                if(self.get_commision_type() == 'no commission'):
+                    if(self.contract == 'salary'):
+                        return 4000
+                    elif(self.contract == 'hourly'):
+                        return 2500
     def get_commision_type(self):
         return self.commission_type
     def __str__(self):
