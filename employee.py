@@ -51,4 +51,4 @@ jan = Employee('Jan', pay = 25, hours = 150, commission = 220, num_of_contracts 
 robbie = Employee('Robbie', pay = 2000, commission = 1500)
 
 # Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
-ariel = Employee('Ariel, pay = 30, hours = 120, commission = 600)
+ariel = Employee('Ariel', pay = 30, hours = 120, commission = 600)
