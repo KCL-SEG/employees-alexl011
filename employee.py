@@ -9,7 +9,6 @@ class Employee:
         self.commission = commission
         self.num_of_contracts = num_of_contracts
 
-
     def get_pay(self):
         pay = self.pay
         if self.hours > 0:
@@ -20,19 +19,20 @@ class Employee:
                 commission *= self.num_of_contracts
             pay += commission
         return pay
+
     def __str__(self):
-        fin_str = f'{self.name}'
+        fin_str = f"{self.name}"
         if self.hours > 0:
-            fin_str = fin_str + f' works on a contract of {self.hours} hours at {self.pay}/hour'
+            fin_str = fin_str + f" works on a contract of {self.hours} hours at {self.pay}/hour"
         else:
-            fin_str = fin_str + f' works on a monthly salary of {self.pay}'
+            fin_str = fin_str + f" works on a monthly salary of {self.pay}"
         if self.commission > 0:
             if self.num_of_contracts > 0:
-                fin_str = fin_str + f' and receives a commission for {self.num_of_contracts} contract(s) at {self.commission}/contract'
+                fin_str = fin_str + f" and receives a commission for {self.num_of_contracts} contract(s) at {self.commission}/contract"
             else:
-                fin_str = fin_str + f' and receives a bonus commission of {self.commission}'
+                fin_str = fin_str + f" and receives a bonus commission of {self.commission}"
 
-        fin_str = fin_str + f'. Their total pay is {self.get_pay()}'
+        fin_str = fin_str + f". Their total pay is {self.get_pay()}."
         return fin_str
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
@@ -51,4 +51,4 @@ jan = Employee('Jan', pay = 25, hours = 150, commission = 220, num_of_contracts 
 robbie = Employee('Robbie', pay = 2000, commission = 1500)
 
 # Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
-ariel = Employee('Ariel', pay = 30, hours = 120, commission = 600)
+ariel = Employee('Ariel, pay = 30, hours = 120, commission = 600)
