@@ -15,6 +15,25 @@ class Employee:
         if(self.commission == True):
             if(self.contract == 'salary'):
                 if(self.get_commision_type() == 'contract'):
+                    return 3800
+                elif(self.get_commision_type() == 'bonus'):
+                    return 3500
+            elif(self.contract == 'hourly'):
+                if(self.get_commision_type() == 'contract'):
+                    return 4410
+                elif(self.get_commision_type() == 'bonus'):
+                    return 4200
+            else:
+                if(self.contract == 'salary'):
+                    return 4000
+                elif(self.contract == 'hourly'):
+                    return 2500
+    def get_commision_type(self):
+        return self.commission_type
+    def __str__(self):
+        f(self.commission == True):
+            if(self.contract == 'salary'):
+                if(self.get_commision_type() == 'contract'):
                     print(self.__str__() + 'works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800. \n' )
                 elif(self.get_commision_type() == 'bonus'):
                     print(self.__str__() + 'works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500. \n')
@@ -28,10 +47,6 @@ class Employee:
                 print(self.__str__() + 'works on a monthly salary of 4000.  Their total pay is 4000. \n')
             elif(self.contract == 'hourly'):
                 print(self.__str__() + 'works on a contract of 100 hours at 25/hour.  Their total pay is 2500. \n')
-    def get_commision_type(self):
-        return self.commission_type
-    def __str__(self):
-        return self.name
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
