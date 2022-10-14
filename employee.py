@@ -31,7 +31,7 @@ class Employee:
     def get_commision_type(self):
         return self.commission_type
     def __str__(self):
-        f(self.commission == True):
+        if(self.commission == True):
             if(self.contract == 'salary'):
                 if(self.get_commision_type() == 'contract'):
                     print(self.__str__() + 'works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800. \n' )
